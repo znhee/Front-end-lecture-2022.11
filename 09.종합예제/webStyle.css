@@ -1,7 +1,8 @@
 /* 1. 초기화 하기*/
 * {
     margin: 0; padding: 0;
-    font-family: '맑은 고딕' 'Malgun Gothic', 'Gothic', sans-serif 'Noto Sans';
+    font-family: 'Noto Sans KR', sans-serif;
+    /* font-family: '맑은 고딕' 'Malgun Gothic', 'Gothic', sans-serif 'Noto Sans'; */
 }
 a { text-decoration: none; }
 li { list-style: none; }
