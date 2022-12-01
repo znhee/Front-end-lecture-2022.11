@@ -75,3 +75,27 @@ function datetime() {
 const now = datetime();
 console.log(now);                           // 2022-12-01 15:49:17
 console.log(now.substring(2, 16));          // 22-12-01 15:49
+
+// 1에서부터 1000까지 숫자가 있다.
+// 0은 몇번, 1은 몇번, ... , 9는 몇번 사용되는가?
+
+let nums = '';
+for (let i=1; i<=1000; i++) {
+    nums += i;
+}
+
+// split 메소드 활용
+let obj = {};
+for (let i = 0; i <= 9; i++) {
+    obj[String(i)] = nums.split(String(i)).length - 1;
+}
+console.log(obj);
+
+// 정규표현식 활용
+let reArr = [];
+for (let i = 0; i <= 9; i++) {
+    let re = new RegExp('[^' + i + ']', 'g');
+    reArr.push(nums.replace(re, '').length);
+}
+console.log(reArr);
+
