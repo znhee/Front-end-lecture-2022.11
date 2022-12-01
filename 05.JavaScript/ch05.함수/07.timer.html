@@ -27,8 +27,16 @@
         }
         function countDown() {
             disp(count--);
-            let interval
+            let interval = setInterval(() => {
+                hide();
+                if (count != 0) 
+                    disp(count--);
+            }, 1000);
+            setTimeout(() => {
+                clearInterval(interval);
+            }, 3000);
         }
+        window.onload = countDown;
     </script>
 </body>
 </html>
